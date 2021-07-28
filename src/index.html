@@ -1,0 +1,94 @@
+<!Doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Mongia Foundation :: Index</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <!-- Owl Stylesheets -->
+  <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="assets/css/slicknav.css">
+  <link rel="stylesheet" href="assets/css/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/slick.css">
+  <link rel="stylesheet" href="assets/css/light-box.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <app-root></app-root>
+
+  <!-- Jquery, Popper, Bootstrap -->
+  <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+  <script src="./assets/js/popper.min.js"></script>
+  <script src="./assets/js/bootstrap.min.js"></script>
+  <!-- Jquery Mobile Menu -->
+  <script src="./assets/js/jquery.slicknav.min.js"></script>
+  <!-- Jquery Slick , Owl-Carousel Plugins -->
+  <script src="./assets/js/owl.carousel.js"></script>
+  <script src="./assets/js/slick.min.js"></script>
+  <script src="./assets/js/lightbox.js"></script>
+  <!-- One Page, Animated-HeadLin -->
+  <script src="./assets/js/wow.min.js"></script>
+
+  <script src="./assets/js/main.js"></script>
+  <script>
+    $(function() {
+            var url = $("#charityVideo").attr('src');
+            $("#charityVideo").attr('src', '');
+            $("#videoModal").on('shown.bs.modal', function () {
+                $("#charityVideo").attr('src', url);
+            });
+            $("#videoModal").on('hide.bs.modal', function () {
+                $("#charityVideo").attr('src', '');
+            });
+        });
+
+        $(function() {
+      $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        dots:false,
+        nav:true,
+        navText: ["<i class='fa fa-arrow-left'></i>","<i class='fa fa-arrow-right'></i>"],
+        responsive: {
+          0: {
+            items: 1,
+            nav: true
+          },
+          600: {
+            items: 1,
+            nav: false
+          },
+          1000: {
+            items: 4,
+            nav: true,
+            loop: false,
+            margin: 20
+          }
+        }
+      })
+    })
+      $(function(){
+        $('#navigation').slicknav();
+    });
+
+    $(function() {
+  // bind change event to select
+  $('#dynamic_select').on('change', function() {
+    var url = $(this).val(); // get selected value
+    if (url) { // require a URL
+      window.location = url; // redirect
+    }
+    return false;
+  });
+});
+
+  </script>
+</body>
+</html>

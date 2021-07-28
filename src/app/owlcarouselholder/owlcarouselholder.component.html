@@ -1,0 +1,18 @@
+<owl-carousel-o [options]="customOptions">
+    <ng-template carouselSlide *ngFor="let gallery of galleryData" class="item">
+        <div class="portfolio-item">
+            <a href="http://mongiafoundationapi.ourdemoservers.com/{{ gallery.Gallery_Image_url }}" data-lightbox="image-1"><div class="thumb">
+                <div class="hover-effect">
+                    <div class="hover-content">
+                        <h1>African <em>Orphans</em></h1>
+                        <p>Awesome Subtittle Goes Here</p>
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="http://mongiafoundationapi.ourdemoservers.com/{{ gallery.Gallery_Image_url }}">
+                </div>
+            </div></a>
+        </div>
+    </ng-template>  
+     
+  </owl-carousel-o>

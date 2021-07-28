@@ -1,0 +1,21 @@
+<section class="review-panel pd-t-50 pd-b-80 wow fadeInUp" data-wow-delay="100ms">
+    <div class="container">
+        <div class="row justify-content-center">
+            <h2>Great <span>Reviews</span></h2>
+            <div class="elementor-section" *ngIf="testimonialsData">
+                <div class="col-md-6 cl-lg-6 col-sm-12">
+                    <div class="elementor-column-wrap">
+                        <blockquote>"{{ testimonialsData.Description }}"</blockquote>
+                        <p class="quote-by">{{ testimonialsData.Title }}</p>
+                        <div class="overtrans_layer"><i class="fa fa-quote-right" aria-hidden="true"></i></div>
+                    </div>
+                </div>
+                <div class="col-md-6 cl-lg-6 col-sm-12 pd0">
+                    <div class="elementor-image">
+                        <img src="assets/images/review-1.jpg" class="img-fluid"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

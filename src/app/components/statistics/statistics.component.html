@@ -1,0 +1,46 @@
+<section class="donation_row pd-t-100 pd-b-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-xs-12 wow fadeInUp" data-wow-delay="100ms" *ngIf="statisticsData">
+                <h2>Donation <span class="sub-title">Statistics</span></h2>
+                <div class="row">
+                <div class="card-stat">
+                    <img src="assets/images/campaign.png" alt="" />
+                    <h3>{{ statisticsData.Campaing }}</h3>
+                    <h4>Campaigns &amp; <br>Causes of</h4>
+                </div>
+                <div class="card-stat">
+                    <img src="assets/images/donated.png" alt="" />
+                    <h3>&#x20b9; {{ statisticsData.Doneted }}</h3>
+                    <h4>Donated</h4>
+                </div>
+                <div class="card-stat">
+                    <img src="assets/images/donor.png" alt="" />
+                    <h3>{{ statisticsData.Donor }}</h3>
+                    <h4>Donors</h4>
+                </div>
+                <div class="card-stat">
+                    <img src="assets/images/volunteer-stat.png" alt="" />
+                    <h3>{{ statisticsData.Volunteers }}</h3>
+                    <h4>Volunteers</h4>
+                </div>
+            </div>
+                <div class="text-center mt-30">
+                    <a href="#campaignModal" data-toggle="modal" data-target="#campaignModal" class="btn hero-btn" data-animation="fadeInLeft" data-delay=".8s">Start a Campaign</a>
+                </div>
+            </div>
+            <!-- <div class="col-md-5 col-lg-5 col-xs-12 align-items-center wow fadeInUp" data-wow-delay="400ms">
+                <div class="donation_cause">
+                    <div class="col-md-6 col-lg-6 col-6">
+                         <img src="assets/images/cause_globe.png" alt="" class="img-fluid" />
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-6">
+                        <h2>Causes of <span class="sub-title"><br>Donation</span></h2>
+                        <p>Sed diam metus facilisis eu. Sit amet pulvinar dictum quam odio lorem</p>
+                        <a href="#" class="btn hero-btn navy-btn" data-animation="fadeInLeft" data-delay=".8s">View All</a>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</section>

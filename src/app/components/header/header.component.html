@@ -1,0 +1,112 @@
+<header>
+    <!-- Header Start -->
+    <div class="header-area header-transparent">
+            <div class="main-header  header-sticky">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <!-- Logo -->
+                        <div class="col-xl-2 col-lg-2 col-md-8 col-10">
+                            <div class="logo mobile_logo">
+                                <a href="#"><img src="assets/images/logo.png" alt="Logo" /></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-8 col-lg-8 col-md-2 col-2">
+                            <div id="primary-menu-trigger" class="mb-menu-icon d-mb-block d-lg-none">
+                                <i class="fa fa-bars"></i>
+                            </div>
+                        <div class="menu-main d-flex align-items-center justify-content-center">
+                            <!-- Main-menu -->
+                            <div class="main-menu f-right d-none d-lg-block">
+                                <nav> 
+                                    <ul id="navigation">
+                                        <li><a href="home">Home</a></li>
+                                        <li *ngFor="let menu of menuData">
+                                            
+                                            <div *ngIf="menu.have_sub_menu; else noLink">
+                                                <a href="javascript:void(0)">{{ menu.Title }}</a>
+                                            </div>
+
+                                            <ng-template #noLink>
+                                                <a href="page/{{ menu.PageId }}">{{ menu.Title }}</a>    
+                                            </ng-template>
+
+                                            <ul class="submenu" *ngIf="menu.have_sub_menu">
+                                                <li *ngFor="let sub_menu of menu.sub_menu"><a href="page/{{ sub_menu.PageId }}">{{ sub_menu.Title }}</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="contact">Contact</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <!-- <div class="header-right-btn f-right d-none d-lg-block">
+                                <a href="contact.html" class="btn header-btn">Contact Us </a>
+                            </div> -->
+                        </div>
+                        </div>   
+                        <div class="col-xl-2 col-lg-2 col-md-2">
+                            <ul class="social_feeds">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Mobile Menu -->
+                        <div class="col-12">
+                            <div class="mobile_menu d-mb-block d-lg-none">
+                                    <nav class="primary-menu" id="main_menu"> 
+                                        <ul id="navigation">  
+                                            <li><a href="#">Home</a></li>
+                                            <li id="submenu_item1"><a href="javascript:void(0);">About</a><i class="down"></i>
+                                                <ul class="submenu" id="submenu1">
+                                                    <li><a href="#">From the Chairman</a></li>
+                                                    <li><a href="#">Who We Are</a></li>
+                                                    <li><a href="#">Core Values</a></li>
+                                                    <li><a href="#">Our Approach</a></li>
+                                                    <li><a href="#">Our Board</a></li>
+                                                    <li><a href="#">Our Team</a></li>
+                                                    <li><a href="#">Partners</a></li>
+                                                    <li><a href="#">Testimonials</a></li>
+                                                    <li><a href="#">Financials</a></li>
+                                                 </ul>
+                                            </li>
+                                            <li id="submenu_item2"><a href="javascript:void(0);">Our Work</a><i class="down"></i>
+                                                 <ul class="submenu" id="submenu2">
+                                                    <li><a href="#">Santushti</a></li>
+                                                    <li><a href="#">Health</a></li>
+                                                    <li><a href="#">Education</a></li>
+                                                    <li><a href="#">Livelihood</a></li>
+                                                    <li><a href="#">Social Upliftment</a></li>
+                                                    <li><a href="#">Future Plans</a></li>
+                                                 </ul>   
+                                            </li>
+                                            <!-- <li><a href="#">Innovations</a></li>-->
+                                            <li id="submenu_item3"><a href="javascript:void(0);">Get Involved</a><i class="down"></i>
+                                                <ul class="submenu" id="submenu3">
+                                                    <li><a href="#">Individuals</a></li>
+                                                    <li><a href="#">Corporate</a></li>
+                                                    <li><a href="#">Institutions</a></li>
+                                                    <li><a href="#">Resources</a></li>
+                                                 </ul>
+                                            </li> 
+                                            <li id="submenu_item4"><a href="javascript:void(0);">Media</a><i class="down"></i>
+                                                <ul class="submenu" id="submenu4">
+                                                    <li><a href="#">Press</a></li>
+                                                    <li><a href="#">Events</a></li>
+                                                    <li><a href="#">Photo Gallery</a></li>
+                                                    <li><a href="#">Video Gallery</a></li>
+                                                 </ul>
+                                             </li>
+                                              <li><a href="#">Blog</a></li>
+                                            <li><a href="#">Contact</a></li>
+                                        </ul>
+                                    </nav>
+                                    
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <!-- Header End -->
+</header>

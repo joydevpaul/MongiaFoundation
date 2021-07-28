@@ -1,0 +1,37 @@
+<main>
+    <section class="priority-block pd-t-50 pd-b-80 wow fadeInUp" data-wow-delay="100ms">
+        <div class="container text-center" style="margin-top: 80px;">
+            <h2>Contact</h2>
+            
+            <div class="modal-body">
+                <div class="regForm ftco-animate fadeInUp ftco-animated">
+                    <h3 class="text-center">Contact Us</h3>
+                    <p class="text-center">Please fill in this form and we will contact you.</p>
+                    <form class="bg-light pd-l-0 pd-r-0 contact-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+                        <div class="form-group">
+                            <input type="text" class="form-control" formControlName="Name" id="your_name" placeholder="Your Name*" required="">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" class="form-control" formControlName="Mobile" id="mobile" placeholder="Mobile Number*" required="">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" formControlName="Email" id="email" placeholder="Email ID*" required="">
+                        </div>
+                        <div class="form-group"> 
+                            <textarea id="volunteer-message" formControlName="Message" cols="30" rows="7" class="form-control" placeholder="Write in brief – why do you want to become a volunteer with us*" style="height: 120px !important;"></textarea>
+                        </div>
+                        <div class="form-group text-center">
+                            <input type="submit" id="submit-btn" value="Submit" class="btn btn-secondary py-3 px-5">
+                        </div>
+                    </form>
+                    <p><small>* All Fields are mandatory<br><br>
+                        
+                    </small></p>
+               </div>
+            </div>
+            
+        </div>
+    </section>
+
+    
+</main>

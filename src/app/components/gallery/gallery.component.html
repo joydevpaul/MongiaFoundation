@@ -1,0 +1,42 @@
+<!-- <section class="gallery-block pd-t-80">
+    <div class="full-screen-portfolio" id="portfolio">
+        <div class="container-fluid">
+            <h2 class="text-center pd-b-50">Our <span>Gallery</span></h2>
+		  <div class="owl-carousel owl-theme">
+        
+            <owl-carousel-o [options]="customOptions">
+
+                <ng-container *ngFor="let gallery of galleryData">
+                  <ng-template  carouselSlide [id]="gallery.Id">
+                    <img src="http://mongiafoundationapi.ourdemoservers.com/{{gallery.Gallery_Image_url}}">
+                  </ng-template>
+                </ng-container>
+            
+              </owl-carousel-o> 
+            </div>
+        </div>
+    </div>
+</section> -->
+
+
+<section class="gallery-block pd-t-50">
+    <div class="full-screen-portfolio" id="portfolio">
+        <div class="container-fluid">
+            <h2 class="text-center pd-b-50">Our <span>Gallery</span></h2>
+		  <div class="owl-carousel owl-theme">
+		   
+            <owl-carousel-o [options]="customOptions">
+
+                <ng-container *ngFor="let gallery of galleryData">
+                  <ng-template  carouselSlide [id]="gallery.Id">
+                    <img src="http://mongiafoundationapi.ourdemoservers.com/{{gallery.Gallery_Image_url}}">
+                  </ng-template>
+                </ng-container>
+            
+              </owl-carousel-o> 
+            </div>
+
+			
+        </div>
+    </div>
+</section>

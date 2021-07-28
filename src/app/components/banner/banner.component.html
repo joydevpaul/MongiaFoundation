@@ -1,0 +1,25 @@
+
+
+<div class="slider-area slider-height" style="background-image:url(assets/images/h1_hero.jpg)">
+    <div class="slider-active">
+        <ngx-slick-carousel class="carousel" 
+                #slickModal="slick-carousel"
+                [config]="slideConfig">
+
+                <div class="single-slider" ngxSlickItem *ngFor="let banner of bannerData">
+                    <div class="slider-cap-wrapper">
+                        <div class="hero__caption">
+                            <h1 data-animation="fadeInLeft" data-delay=".5s">{{banner.Title}}</h1>
+                            <p data-animation="fadeInLeft" data-delay=".2s">Became a part to change the world</p>
+                            <a href="#donateModal" data-toggle="modal" data-target="#donateModal" class="btn hero-btn" data-animation="fadeInLeft" data-delay=".8s">Donate Now</a>
+                        </div>
+                        <div class="hero__img">
+                            <img src="http://mongiafoundationapi.ourdemoservers.com/{{banner.Image_url}}" alt="">
+                        </div>
+                    </div>
+                </div>
+                
+        </ngx-slick-carousel>
+        <!-- Single Slider -->
+    </div>
+</div>
