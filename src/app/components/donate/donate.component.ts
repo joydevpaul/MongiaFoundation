@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, ReactiveFormsModule} from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+//import { BootstrapModalModule } from 'ngx-bootstrap-modal';
 
 
 @Component({
@@ -12,6 +13,7 @@ export class DonateComponent implements OnInit {
 
   form: any= FormGroup;
   formSubmitted: any = false;
+  
   
 
   constructor(private http:HttpClient, private fb: FormBuilder, private rfm: ReactiveFormsModule) { }
@@ -46,6 +48,8 @@ export class DonateComponent implements OnInit {
       this.http.post('http://mongiafoundationapi.ourdemoservers.com/api/Donate', formData).subscribe(() =>  {
         alert('Submitted Successfull! Thank You');
         
+        var element1: any = document.getElementById('donateModal');
+        element1.remove();
         
       })
     }

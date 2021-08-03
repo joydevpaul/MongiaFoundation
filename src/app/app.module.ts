@@ -25,6 +25,7 @@ import { StatisticsComponent } from './components/statistics/statistics.componen
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

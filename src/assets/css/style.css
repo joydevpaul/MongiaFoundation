@@ -3534,6 +3534,7 @@ hr {
   bottom: 60px;
   background: none;
   border: 0;
+  font-size: 12px;
   padding: 0;
   z-index: 2;
   opacity: 1;
@@ -9033,7 +9034,7 @@ transform: translateZ(0);
       display: block !important;
     }  
     .header-area .main-header {
-      padding: 22px 50px;
+      padding: 0px 50px;
   }
 }
 .element0:before {
@@ -9417,6 +9418,7 @@ a.play_btn i {
 }
 html,body {
   overflow-x: hidden;
+  min-width: auto !important;
 }
  /*---------------Priorities--------------*/
 
